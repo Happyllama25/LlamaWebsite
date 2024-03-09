@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visual White Noise Generator with Interactive Controls</title>
+<style>
+  body, html { margin: 0; padding: 0; overflow: hidden; }
+  #overlay, canvas { display: none; width: 100%; height: 100%; }
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="overlay">
+  <p>Warning: This page contains moving static.</p>
+  <p>I use this for video bitrate testing</p>
+  <p>Click anywhere to toggle fullscreen<br>Press the spacebar to toggle pause</p>
+  <button id="confirmButton">Confirm</button>
+</div>
+<canvas id="noiseCanvas"></canvas>
+<script>
+  const canvas = document.getElementById('noiseCanvas');
+  const ctx = canvas.getContext('2d');
+  const overlay = document.getElementById('overlay');
+  const confirmButton = document.getElementById('confirmButton');
+  let animationFrameId = null;
+  let isPaused = false;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener('resize', resizeCanvas, false);
+  resizeCanvas();
+
+  function generateNoise() {
+    if (isPaused) return;
+    const imageData = ctx.createImageData(canvas.width, canvas.height);
+    for (let i = 0; i < imageData.data.length; i += 4) {
+      const color = Math.floor(Math.random() * 256);
+      imageData.data[i] = color;
+      imageData.data[i + 1] = color;
+      imageData.data[i + 2] = color;
+      imageData.data[i + 3] = 255;
+    }
+    ctx.putImageData(imageData, 0, 0);
+    animationFrameId = requestAnimationFrame(generateNoise);
+  }
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(console.error);
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+
+  function togglePause() {
+    isPaused = !isPaused;
+    if (!isPaused) generateNoise();
+  }
+
+  confirmButton.addEventListener('click', function() {
+    overlay.style.display = 'none';
+    canvas.style.display = 'block';
+    generateNoise();
+    document.addEventListener('click', toggleFullscreen);
+    document.addEventListener('keydown', function(event) {
+      if (event.code === 'Space') {
+        event.preventDefault(); // Prevent the default action to stop scrolling down the page
+        togglePause();
+      }
+    });
+  });
+</script>
+</body>
+</html>
+ 
