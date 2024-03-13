@@ -1,9 +1,9 @@
 # LlamaWebsite
 oh cool! free hosting!
 
-Hi, its me, i exist - supposedly.
+Hi, its me, i exist - probably.
 
-Link to site is https://happyllama25.net
+link to site is https://happyllama25.net
 
 and some social links are there too
 
