@@ -1,157 +1,201 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Happyllama25</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" type="image/x-icon" href="https://happyllama25.net/favicon.ico">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="https://happyllama25.net/favicon.ico">
+    <title>Happyllama25</title>
+	<!-- zamn thats quite a bit of css -->
+    <style> 
+        html, body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #032F48, #36013F);
+            color: #f5e8ff;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: auto;
+        }
+		
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(94, 66, 166, 0.15);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-size: 2em;
+            border-bottom: 2px solid #663399;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .project-list {
+            list-style-type: none;
+            padding: 0;
+        }
+		
+        .project-list li {
+            background-color: rgba(37, 39, 77, 0.8);
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+			backdrop-filter: blur(2px);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #663399;
+        }
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">What I do</a></li>
-							<li><a href="#three">Contact me</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+        .hex-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: repeating-linear-gradient(
+                60deg,
+                rgba(255, 204, 0, 0.05) 0,
+                rgba(255, 204, 0, 0.05) 2px,
+                transparent 2px,
+                transparent 50px
+            ),
+            repeating-linear-gradient(
+                120deg,
+                rgba(255, 204, 0, 0.05) 0,
+                rgba(255, 204, 0, 0.05) 2px,
+                transparent 2px,
+                transparent 50px
+            ),
+            repeating-linear-gradient(
+                0deg,
+                rgba(255, 204, 0, 0.05) 0,
+                rgba(255, 204, 0, 0.05) 2px,
+                transparent 2px,
+                transparent 50px
+            );
+            background-size: 58px 100px;
+        }
+		
+		.channel-list {
+			list-style: none;
+			padding: 0;
+		}
+		.channel-list li {
+			background-color: rgba(37, 39, 77, 0.8);
+			margin: 10px 0;
+			padding: 20px;
+			border-radius: 5px;
+			backdrop-filter: blur(2px);
+		}
+		.channel-list li p {
+			margin: 0;
+		}
+		
+		a {
+			color: #ffcc00;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			text-decoration: underline;
+		}
+		
+    </style>
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body>
+    <div class="hex-background"></div>
+    <div class="container">
+        <header>
+            <h1>Happyllama25</h1>
+			<p>i have no idea what im doing, but it seems to be working..</p>
+            <p>Programming, Streaming, Making games</p>
+        </header>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Welcome to my site!</h1>
-							<p>Hi there! I'm Happyllama25, 
-								I have an interest in coding and computers. Click below to find out more!</p>
-							<p>im remaking this, please hold...</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">More info</a></li>
-							</ul>
-						</div>
-					</section>
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p><h3>Hello!</h3> I'm Happyllama25. I like to make things, whether it's programming projects, bots, or games. I also share clips of my projects on my YouTube channel, and sometimes stream on Twitch and Youtube.</p>
+			<p>Thanks for visiting and welcome to my website!</p>
+        </section>
 
-				<!-- Two -->
-					<section id="one" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What I do</h2>
-							<p>Here are some of the projects I have made and have experience in.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h2>Discord.py</h2>
-									<p>I have experience in making Discord bots with various goals written in Python.</p>
-									<p>Find out more and see my projects by visiting my GitHub below.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Happylama25" class="button">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Game server hosting and configuration</h3>
-									<p>I have done a lot of game server hosting (Dedicated Servers) and configuration, some examples include: Minecraft (Vanilla, Forge, Paper/Spigot, etc.), ARK: Survival Evolved, Valheim, Terraria (Vanilla, TModLoader, TShock), Titanfall 2 (NorthStar Client), Astroneer and more...</p>
-									<p>If you need any help or are interested in my hosting service, feel free to contact me!</p>
-									<ul class="actions">
-										<li><a href="#three" class="button">Contact Me</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-server"></span>
-									<h3>VPS Management and Deployment</h3>
-									<p>I am familiar with OCI (Oracle Cloud Infrastructure) VPS management and deployment, I also know myself around basic usage of Linux</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>API requests and handling</h3>
-									<p>One of my personal projects with Python included interacting with API requests and error handling, In my project I used the Python <code>requests</code> library, and used various different requests to achieve my goals.</p>
-								</section>
-							</div>
-						</div>
-					</section>
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <ul class="project-list">
+                <li>
+                    <h3>Discord Utility Bot</h3>
+                    <p>My first personal programming project! A bot written in Python, used as a utility do-anything bot where I add and remove features as I need them.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/Happyllama25/discord-arkplayerkicker" target="_blank">ARK Player Kicker</a></h3>
+                    <p>I built this bot to solve a problem on the game ARK: Survival Evolved, where if a player crashes while connected to a server, they cannot rejoin. This bot integrates with RCON and kicks the player on request.</p>
+                </li>
+				<li>
+					<h3><a href="https://github.com/Happyllama25/LlamaWebsite" target="_blank">This Website!</a></h3>
+					<p>I wrote this over the course of a couple days, and learned a bunch of HTML and CSS in the process.</p>
+				</li>
+                <!-- uwu -->
+				
+            </ul>
+        </section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Below are various ways you can contact me</p>
-							<div class="split style1">
-								<!-- <section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section> -->
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Discord</h3>
-											<span>happyllama25<br>
-											If you contact me via Discord, please mention you came from my website, that way its easier for me to help you</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="mailto:contact@happyllama25.net">contact@happyllama25.net</a>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://www.twitch.tv/happylama25" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>
-												<li><a href="https://github.com/Happylama25" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="https://discord.gg/knm9b4a9rS" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+		<section id="links">
+			<h2 class="section-title">Channels</h2>
+			<ul class="channel-list">
+				<li>
+					<p>Check out my YouTube channel where I post clips of my projects: 
+						<a href="https://www.youtube.com/@LlamaClips" target="_blank">@LlamaClips</a>
+					</p>
+				</li>
+				<li>
+					<p>I go live on Twitch and YouTube: 
+						<a href="https://www.twitch.tv/happylama25" target="_blank">Twitch - happylama25</a> and 
+						<a href="https://www.youtube.com/@Happyllama25" target="_blank">YouTube - @Happyllama25</a>
+					</p>
+				</li>
+				<li>
+					<p>I also have a TikTok where I post clips: 
+						<a href="https://www.tiktok.com/@happyllama256" target="_blank">TikTok - Happyllama256</a>
+					</p>
+				</li>
+				<li>
+					<p>My GitHub, where I publicly post many of my projects and their progress: 
+						<a href="https://github.com/Happyllama25" target="_blank">Happyllama25</a>
+					</p>
+				</li>
+				<li>
+					<p>My username is usually consistent across platforms and services, if you ever need to verify, contact me on one of the platforms above or below, or any of the linked contacts on those services.
+					</p>
+				</li>
+			</ul>
+		</section>
 
-			</div>
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach out via through email <a href="mailto:llama@happyllama25.net">llama@happyllama25.net</a></p>
+			<p>You can also find me on Discord as happyllama25 or on my <a href="https://discord.gg/knm9b4a9rS"target="_blank">Discord</a> server</p>
+        </section>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+        <footer>
+            <p>&copy; 2024 Happyllama25. All rights reserved. With love <3</p>
+        </footer>
+    </div>
+</body>
 </html>

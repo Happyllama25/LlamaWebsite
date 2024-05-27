@@ -1,193 +1,75 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>404 Page not found</title>
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-</head>
-<body>
-<div id="notfound">
-<div class="notfound">
-<div class="notfound-404">
-<h1>4<span>0</span>4</h1>
-</div>
-<h2>Page not found</h2>
-<form class="notfound-search">
-<h1>:(</h1>
-</form>
-</div>
-</div>
-</body>
-<style>
-        * {
-            -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        }
-
-        body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="https://happyllama25.net/favicon.ico">
+    <title>404 - Happyllama25</title>
+    <style>
+        html, body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #032F48, #36013F);
+            color: #f5e8ff;
+            margin: 0;
             padding: 0;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: relative;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(94, 66, 166, 0.15);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            text-align: center;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            font-size: 8em;
             margin: 0;
         }
-
-        #notfound {
-            position: relative;
-            height: 100vh;
-            background: #f6f6f6;
+        header h1 .accent {
+            color: #ffcc00;
         }
-
-        #notfound .notfound {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
+        section {
+            margin-bottom: 50px;
         }
-
-        .notfound {
-            max-width: 767px;
-            width: 100%;
-            line-height: 1.4;
-            padding: 110px 40px;
+        footer {
             text-align: center;
-            background: #fff;
-            -webkit-box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.1);
-                    box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            border-top: 1px solid #663399;
         }
-
-        .notfound .notfound-404 {
-            position: relative;
-            height: 180px;
+        a {
+            color: #ffcc00;
+            font-weight: bold;
+            text-decoration: none;
         }
-
-        .notfound .notfound-404 h1 {
-            font-family: 'Roboto', sans-serif;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-            font-size: 165px;
-            font-weight: 700;
-            margin: 0px;
-            color: #262626;
-            text-transform: uppercase;
-        }
-
-        .notfound .notfound-404 h1>span {
-            color: #b700ff;
-        }
-
-        .notfound h2 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 22px;
-            font-weight: 400;
-            text-transform: uppercase;
-            color: #151515;
-            margin-top: 0px;
-            margin-bottom: 25px;
-        }
-
-        h1 {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .notfound .notfound-search {
-            position: relative;
-            max-width: 320px;
-            width: 100%;
-            margin: auto;
-        }
-
-        .notfound .notfound-search>input {
-            font-family: 'Roboto', sans-serif;
-            width: 100%;
-            height: 50px;
-            padding: 3px 65px 3px 30px;
-            color: #151515;
-            font-size: 16px;
-            background: transparent;
-            border: 2px solid #c5c5c5;
-            border-radius: 40px;
-            -webkit-transition: 0.2s all;
-            transition: 0.2s all;
-        }
-
-        .notfound .notfound-search>input:focus {
-            border-color: #00b7ff;
-        }
-
-        .notfound .notfound-search>button {
-            position: absolute;
-            right: 15px;
-            top: 5px;
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            border: none;
-            background: transparent;
-            padding: 0;
-            cursor: pointer;
-        }
-
-        .notfound .notfound-search>button>span {
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-                -ms-transform: translate(-50%, -50%) rotate(-45deg);
-                    transform: translate(-50%, -50%) rotate(-45deg);
-            margin-left: -3px;
-        }
-
-        .notfound .notfound-search>button>span:after {
-            position: absolute;
-            content: '';
-            width: 10px;
-            height: 10px;
-            left: 0px;
-            top: 0px;
-            border-radius: 50%;
-            border: 4px solid #c5c5c5;
-            -webkit-transition: 0.2s all;
-            transition: 0.2s all;
-        }
-
-        .notfound-search>button>span:before {
-            position: absolute;
-            content: '';
-            width: 4px;
-            height: 10px;
-            left: 7px;
-            top: 17px;
-            border-radius: 2px;
-            background: #c5c5c5;
-            -webkit-transition: 0.2s all;
-            transition: 0.2s all;
-        }
-
-        .notfound .notfound-search>button:hover>span:after {
-            border-color: #00b7ff;
-        }
-
-        .notfound .notfound-search>button:hover>span:before {
-            background-color: #00b7ff;
-        }
-
-        @media only screen and (max-width: 767px) {
-            .notfound h2 {
-                font-size: 18px;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            .notfound .notfound-404 h1 {
-                font-size: 141px;
-            }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>4<span class="accent">0</span>4</h1>
+            <p>Womp womp.</p>
+			<p>The page you're looking for doesn't exist.</p>
+        </header>
+        <section>
+            <p>i probably moved it, or deleted it... or my server room is on fire</p>
+            <p>Check the URL for errors or return to the <a href="/">homepage</a>.</p>
+        </section>
+        <footer>
+            <p>&copy; 2024 Happyllama25. All rights reserved. With love <3</p>
+        </footer>
+    </div>
+</body>
 </html>
