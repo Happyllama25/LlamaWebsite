@@ -18,6 +18,15 @@ html, body {
     backdrop-filter: blur(5px);
     border-radius: 10px;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.header p {
+    display: inline;
+}
+
 header {
     text-align: center;
     padding: 50px 0;
