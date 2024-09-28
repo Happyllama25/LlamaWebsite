@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hola, soy Happyllama25, y este es mi sitio web. Explora mis proyectos, aprende algo nuevo, o simplemente mira alrededor, supongo.">
+    <link rel="icon" type="image/x-icon" href="https://happyllama25.net/favicon.ico">
+    <title>Happyllama25</title>
+    <!-- zamn thats quite a bit of css -->
+    <style> 
+        html, body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #032F48, #36013F);
+            color: #fcf9ff;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(94, 66, 166, 0.15);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-size: 2em;
+            border-bottom: 2px solid #663399;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .project-list {
+            list-style-type: none;
+            padding: 0;
+        }
+		
+        .project-list li {
+            background-color: rgba(37, 39, 77, 0.8);
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+			backdrop-filter: blur(2px);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #663399;
+        }
+
+        .hex-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: repeating-linear-gradient(
+                60deg,
+                rgba(255, 204, 0, 0.05) 0,
+                rgba(255, 204, 0, 0.05) 2px,
+                transparent 2px,
+                transparent 50px
+            ),
+            repeating-linear-gradient(
+                120deg,
+                rgba(255, 204, 0, 0.05) 0,
+                rgba(255, 204, 0, 0.05) 2px,
+                transparent 2px,
+                transparent 50px
+            ),
+            repeating-linear-gradient(
+                0deg,
+                rgba(255, 204, 0, 0.05) 0,
+                rgba(255, 204, 0, 0.05) 2px,
+                transparent 2px,
+                transparent 50px
+            );
+            background-size: 58px 100px;
+        }
+		
+		.channel-list {
+			list-style: none;
+			padding: 0;
+		}
+		.channel-list li {
+			background-color: rgba(37, 39, 77, 0.8);
+			margin: 10px 0;
+			padding: 20px;
+			border-radius: 5px;
+			backdrop-filter: blur(2px);
+		}
+		.channel-list li p {
+			margin: 0;
+		}
+		
+		a {
+			color: #ffcc00;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			text-decoration: underline;
+		}
+		
+    </style>
+</head>
+
+<body>
+    <div class="hex-background"></div>
+    
+    <div class="container">
+        <a href="index.html" lang="en">English</a> | <a href="index_es.html" lang="es">Español</a>
+        <header>
+            <h1>Happyllama25</h1>
+            <p>no tengo idea de lo que estoy haciendo, pero parece que está funcionando..</p>
+            <p>Programación, Streaming, Creación de juegos</p>
+        </header>
+
+        <section id="about">
+            <h2 class="section-title">Sobre Mí</h2>
+            <p><h3>¡Hola!</h3> Soy Happyllama25. Me gusta crear cosas, ya sean proyectos de programación, bots, o juegos. También comparto clips de mis proyectos en mi canal de YouTube, y a veces hago streaming en Twitch y Youtube.</p>
+            <p>¡Gracias por visitar y bienvenido a mi sitio web!</p>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Proyectos</h2>
+            <ul class="project-list">
+                <li>
+                    <h3><a href="https://github.com/Happyllama25/discord-arkplayerkicker" target="_blank">ARK Player Kicker</a></h3>
+                    <p>Construí este bot para resolver un problema en el juego ARK: Survival Evolved, donde si un jugador se bloquea mientras está conectado a un servidor, no puede volver a unirse. Este bot se integra con RCON y expulsa al jugador a petición.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/Happyllama25/LlamaWebsite" target="_blank">¡Este Sitio Web!</a></h3>
+                    <p>Escribí esto en el transcurso de un par de días, y aprendí un montón de HTML y CSS en el proceso. (así que por eso existen archivos .css..)</p>
+                </li>
+                <li>
+                    <h3><a href="https://blog.happyllama25.net" target="_blank">Un Blog</a></h3>
+                    <p>Tengo un pequeño espacio de blog donde (con suerte) publicaré sobre las cosas que estoy haciendo, devlogs y guías.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="links">
+            <h2 class="section-title">Canales</h2>
+            <ul class="channel-list">
+                <li>
+                    <p>Consulta mi canal de YouTube donde publico clips de mis proyectos: 
+                        <a href="https://www.youtube.com/@LlamaClips" target="_blank">@LlamaClips</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Hago transmisiones en vivo en 
+                        <a href="https://www.twitch.tv/happylama25" target="_blank">Twitch - happylama25</a> y 
+                        <a href="https://www.youtube.com/@Happyllama25" target="_blank">YouTube - @Happyllama25</a>
+                    </p>
+                </li>
+                <li>
+                    <p>También tengo un TikTok donde publico clips: 
+                        <a href="https://www.tiktok.com/@happyllama256" target="_blank">TikTok - Happyllama256</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Mi GitHub, donde publico muchos de mis proyectos y su progreso públicamente: 
+                        <a href="https://github.com/Happyllama25" target="_blank">Happyllama25</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Mi blog, donde elaboro sobre proyectos y publico guías que espero sean útiles: 
+                        <a href="https://blog.happyllama25.net" target="_blank">blog.happyllama25.net</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Mi nombre de usuario suele ser consistente en las plataformas y servicios, 
+                        <b>eso no significa que todas las cuentas con mi nombre de usuario sean mías</b>, 
+                        si alguna vez necesitas verificarlo, contáctame en una (o más) de las plataformas directamente enlazadas arriba o abajo, o en cualquiera de los contactos enlazados en esos servicios y pregunta.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contacto</h2>
+            <p>Si quieres ponerte en contacto, no dudes en hacerlo a través del correo electrónico <a href="mailto:llama@happyllama25.net">llama@happyllama25.net</a></p>
+            <p>También puedes encontrarme en Discord como happyllama25 o en mi <a href="https://discord.gg/knm9b4a9rS" target="_blank">servidor de Discord</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Happyllama25. Todos los derechos reservados. Con amor <3</p>
+        </footer>
+    </div>
+</body>
+</html>
